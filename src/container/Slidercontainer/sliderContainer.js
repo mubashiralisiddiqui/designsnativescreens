@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Header,Slider,Card } from '../../components'
-import { View, Text } from 'react-native';
+import { Header, Slider, Card } from '../../components'
+import { View, ScrollView } from 'react-native';
 
 
 export default class Slidercontainer extends Component {
@@ -8,20 +8,21 @@ export default class Slidercontainer extends Component {
         return (
             <View>
                 <Header />
-                <Slider/>
-                <Card/>
-
+                <ScrollView>
+                    <Slider />
+                    <Card />
+                </ScrollView>
             </View>
         )
     }
 }
-const styles={
- container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
+const styles = {
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
+    },
 }
 
 
