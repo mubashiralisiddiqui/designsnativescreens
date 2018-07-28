@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native';
 import {SliderContainer}from './src/container'
+import {Mapscreen}from './src/container'
 
 
 
@@ -21,7 +22,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <SliderContainer/>
+        <Mapscreen/>
       </View>
     );
   }

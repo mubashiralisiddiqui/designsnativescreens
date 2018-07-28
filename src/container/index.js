@@ -1,5 +1,7 @@
 import SliderContainer from './Slidercontainer/sliderContainer';
+import Mapscreen from './mapscreen/mapscreen';
 
 export {
-    SliderContainer
+    Mapscreen,
+    SliderContainer,
 }
