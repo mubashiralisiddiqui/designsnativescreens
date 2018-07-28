@@ -8,10 +8,9 @@ export default class AppHeader extends Component {
         return (
             <View>
                 <Header
-                    backgroundColor="#4E6AA0"
-                    leftComponent={{ icon: 'menu', color: '#fff' }}
-                    centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-                    rightComponent={{ icon: 'home', color: '#fff' }}
+                    leftComponent={{ icon: 'chevron-left', color: '#fff', size:32 }}
+                    centerComponent={{ text: 'Select Your Package',  style: { color: '#fff',fontSize:18,marginBottom:5 } }}
+                    // rightComponent={{ icon: 'home', color: '#fff' }}
                 />
             </View>
         )

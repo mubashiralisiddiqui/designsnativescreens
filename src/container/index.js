@@ -1,5 +1,8 @@
 import SliderContainer from './Slidercontainer/sliderContainer';
 
+import Packagecontainer from './Packagecontainer/Packagecontainer';
+
 export {
-    SliderContainer
+    Packagecontainer,
+    SliderContainer,
 }
