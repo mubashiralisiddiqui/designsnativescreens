@@ -1,27 +1,126 @@
 import React, { Component } from 'react';
-import { Header,Button,Card,Icon } from 'react-native-elements';
-import { View,Text } from 'react-native'
-
+import { Header, Button, Card, Icon } from 'react-native-elements';
+import { View, ScrollView, Text } from 'react-native'
+import CardHeader from './cardHeader';
+import Thermometor from 'react-native-vector-icons/SimpleLineIcons'
+import Wheel from 'react-native-vector-icons/MaterialCommunityIcons'
 
 export default class AppHeader extends Component {
     render() {
         return (
-            <View>
+            <ScrollView style={{ display: 'flex' }}>
                 <Card
-                    title='HELLO WORLD'
-                    // image={require('../images/pic2.jpg')}
-                    >
-                    <Text style={{ marginBottom: 10 }}>
-                        The idea with React Native Elements is more about component structure than actual design.
-  </Text>
-                    <Button
-                        icon={<Icon name='code' color='#ffffff' />}
-                        backgroundColor='#03A9F4'
-                        fontFamily='Lato'
-                        buttonStyle={{ borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0 }}
-                        title='VIEW NOW' />
+                    containerStyle={{
+                        padding: 0,
+                        borderRadius: 20,
+                        borderColor: '#0000',
+                        shadowOpacity: 0.7,
+                        shadowRadius: 5,
+                        shadowColor: '#000',
+                        shadowOffset: { height: 0, width: 0 },
+                        elevation: 2
+                    }}
+                >
+                    <View style={{ flex: 1 }}>
+                        <CardHeader />
+                        <View style={{ marginTop: -70 }}>
+                            <View
+                               style={{
+                                // width: 180,
+                                flexDirection: 'row',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                marginVertical:1,
+                                left:10
+                            }}
+                            >
+                                <Wheel
+                                   size={20}
+                                    name="ship-wheel"
+                                />
+                                <Text style={{ color: '#C9C9C9',left:10 }}>Full exteriror hand wash</Text>
+                            </View>
+                            <View
+                               style={{
+                                // width: 180,
+                                flexDirection: 'row',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                marginVertical:1,
+                                left:10
+                            }}
+                            >
+                                <Thermometor
+                                    name='speedometer'
+                                    size={20}
+                                />
+                                <Text style={{ color: '#C9C9C9',left:10 }}>Tyre dressing</Text>
+                            </View>
+                            <View
+                                style={{
+                                    // width: 180,
+                                    flexDirection: 'row',
+                                    alignItems: 'flex-start',
+                                    justifyContent: 'flex-start',
+                                    marginVertical:1,
+                                    left:10
+                                }}
+                            >
+                                <Icon name="menu" />
+                                <Text style={{ color: '#C9C9C9',left:10 }}>Exterior window cleaning</Text>
+                            </View>
+                            <View
+                              style={{
+                                // width: 180,
+                                flexDirection: 'row',
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
+                                marginVertical:1,
+                                left:10
+                            }}
+                            >
+                                <Thermometor
+                                    name='speedometer'
+                                    size={20}
+                                />
+                                <Text style={{ color: '#C9C9C9',left:10 }}>Glossy exteriror</Text>
+                            </View>
+                        </View>
+                        <View>
+                            <Text style={{ color: '#4F6B9F', left: 10, fontSize: 20 }}>
+                                Description
+                        </Text>
+                            <Text style={{
+                                left: 10, width: 400,
+                                flexDirection: 'row', flexWrap: 'wrap',
+                                color: '#C9C9C9',
+                                marginBottom: 10
+                            }}>
+                                Lorem  standard dummy text ever since the 1500s,
+                                Lorem  standard dummy text ever since the 1500s,
+                                Lorem  standard dummy text ever since the 1500s,
+                                Lorem  standard dummy text ever since the 1500s,
+                                Lorem  standard dummy text ever since the 1500s,
+
+                         </Text>
+                        </View>
+
+                    </View>
                 </Card>
-            </View>
+                <Button
+                    backgroundColor='#03A9F4'
+                    buttonStyle={{
+                        marginLeft: 'auto',
+                        marginTop: 15,
+                        borderRadius: 100,
+                        marginRight: 'auto',
+                        marginBottom: 90,
+                        backgroundColor: '#4F6B9F',
+                        width: '50%',
+                        height: 50
+                    }}
+                    title='VIEW MORE' />
+            </ScrollView>
         )
     }
 }
