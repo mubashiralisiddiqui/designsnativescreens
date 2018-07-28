@@ -11,22 +11,55 @@ import {
 } from 'react-native';
 import Slideshow from 'react-native-slideshow'
 import { Icon } from 'react-native-elements';
-
+import ArrowLeft from 'react-native-vector-icons/Ionicons'
+// import arrowRight from 'react-native-vector-icons/Ionicons'
 
 
 
 export default class Slider extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            position: 1,
+            interval: null,
+            dataSource: [
+                {
+                    title: 'Title 1',
+                    caption: 'Caption 1',
+                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUY_g1A8AnQ_BFByMsQEIHA9pQMPX6i4wshQ11ZMdq3i3K5jTf'
+                }, {
+                    title: 'Title 2',
+                    caption: 'Caption 2',
+                    url: 'http://placeimg.com/640/480/any',
+                }, {
+                    title: 'Title 3',
+                    caption: 'Caption 3',
+                    url: 'http://kb4images.com/images/image-of-car/37686835-image-of-car.jpg',
+                },
+            ],
+        };
+    }
     render() {
         return (
             <View>
                 <Slideshow
                     arrowLeft={<Icon />}
                     height={165}
-                    dataSource={[
-                        { url: 'http://placeimg.com/640/480/any' },
-                        { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUY_g1A8AnQ_BFByMsQEIHA9pQMPX6i4wshQ11ZMdq3i3K5jTf' },
-                        { url: 'http://kb4images.com/images/image-of-car/37686835-image-of-car.jpg' }
-                    ]} />
+                    dataSource={this.state.dataSource}
+                    // position={2}
+                    arrowSize={30}
+                    arrowLeft={
+                        <ArrowLeft name="ios-arrow-back"
+                            size={30}
+                            color="white"
+                        />
+                    }
+                    arrowRight={<ArrowLeft
+                        name="ios-arrow-forward"
+                        size={30}
+                        color="white"
+                    />}
+                />
             </View>
         );
     }

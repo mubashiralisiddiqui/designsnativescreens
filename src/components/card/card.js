@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Header, Button, Card, Icon } from 'react-native-elements';
 import { View, ScrollView, Text } from 'react-native'
 import CardHeader from './cardHeader';
+import Thermometor from 'react-native-vector-icons/SimpleLineIcons'
+import Wheel from 'react-native-vector-icons/MaterialCommunityIcons'
 
 export default class AppHeader extends Component {
     render() {
@@ -27,10 +29,14 @@ export default class AppHeader extends Component {
                                     width: 200,
                                     flexDirection: 'row',
                                     alignItems: 'center',
-                                    justifyContent: 'space-around'
+                                    justifyContent: 'space-around',
+                                    marginVertical: 1
                                 }}
                             >
-                                <Icon name="menu" />
+                                <Wheel
+                                   size={20}
+                                    name="ship-wheel"
+                                />
                                 <Text style={{ color: '#C9C9C9' }}>Full exteriror hand wash</Text>
                             </View>
                             <View
@@ -39,7 +45,22 @@ export default class AppHeader extends Component {
                                     flexDirection: 'row',
                                     alignItems: 'center',
                                     justifyContent: 'space-around',
-                                    marginVertical: -4
+                                    marginVertical: 1
+                                }}
+                            >
+                                <Thermometor
+                                    name='speedometer'
+                                    size={20}
+                                />
+                                <Text style={{ color: '#C9C9C9' }}>Full exteriror hand wash</Text>
+                            </View>
+                            <View
+                                style={{
+                                    width: 200,
+                                    flexDirection: 'row',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-around',
+                                    marginVertical:1
                                 }}
                             >
                                 <Icon name="menu" />
@@ -53,8 +74,11 @@ export default class AppHeader extends Component {
                                     justifyContent: 'space-around'
                                 }}
                             >
-                                <Icon name="menu" />
-                                <Text style={{ color:'#C9C9C9' }}>Full exteriror hand wash</Text>
+                                <Thermometor
+                                    name='speedometer'
+                                    size={20}
+                                />
+                                <Text style={{ color: '#C9C9C9' }}>Full exteriror hand wash</Text>
                             </View>
                         </View>
                         <View>
@@ -64,11 +88,15 @@ export default class AppHeader extends Component {
                             <Text style={{
                                 left: 10, width: 400,
                                 flexDirection: 'row', flexWrap: 'wrap',
-                                color: '#C9C9C9'
+                                color: '#C9C9C9',
+                                marginBottom: 10
                             }}>
                                 Lorem  standard dummy text ever since the 1500s,
                                 Lorem  standard dummy text ever since the 1500s,
                                 Lorem  standard dummy text ever since the 1500s,
+                                Lorem  standard dummy text ever since the 1500s,
+                                Lorem  standard dummy text ever since the 1500s,
+
                          </Text>
                         </View>
 
@@ -81,7 +109,7 @@ export default class AppHeader extends Component {
                         marginTop: 15,
                         borderRadius: 100,
                         marginRight: 'auto',
-                        marginBottom: 100,
+                        marginBottom: 90,
                         backgroundColor: '#4F6B9F',
                         width: '50%',
                         height: 50
