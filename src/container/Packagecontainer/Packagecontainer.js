@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Header, Slider, CarList, ListDetailing } from '../../components'
-import { ScrollView, Text } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 
 export default class Packagecontainer extends Component {
@@ -10,11 +10,13 @@ export default class Packagecontainer extends Component {
     // }
     render() {
         return (
-            <ScrollView style={styles.container}>
+            <View style={styles.container}>
                 <Header />
-                <CarList />
-                <ListDetailing />
-            </ScrollView>
+                <ScrollView >
+                    <CarList />
+                    <ListDetailing />
+                </ScrollView>
+            </View>
         )
     }
 }
