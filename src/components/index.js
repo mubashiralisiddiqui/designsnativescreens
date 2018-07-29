@@ -4,6 +4,7 @@ import Card from './card/card';
 import CardHeader from './card/cardHeader'
 import CarList from './CarList/CarList';
 import ListDetailing from './ListDetailing/ListDetailing';
+import MapCalendar from './MapCalendar/MapCalendar'
 
 export {
     CardHeader,
@@ -12,4 +13,6 @@ export {
     Card,
     CarList,
     ListDetailing,
+    CardHeader,
+    MapCalendar
 }
