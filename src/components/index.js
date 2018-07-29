@@ -4,7 +4,8 @@ import Card from './card/card';
 import CardHeader from './card/cardHeader'
 import CarList from './CarList/CarList';
 import ListDetailing from './ListDetailing/ListDetailing';
-import MapCalendar from './MapCalendar/MapCalendar'
+import MapCalendar from './MapCalendar/MapCalendar';
+import Map from './Map/Map';
 
 export {
     CardHeader,
@@ -13,5 +14,6 @@ export {
     Card,
     CarList,
     ListDetailing,
-    MapCalendar
+    MapCalendar,
+    Map
 }

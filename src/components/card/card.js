@@ -38,7 +38,7 @@ export default class AppHeader extends Component {
                                     size={20}
                                     name="ship-wheel"
                                 />
-                                <Text style={{ color: '#C9C9C9', left: 10 }}>Full exteriror hand wash</Text>
+                                <Text style={{ color: '#C9C9C9', left: 10}}>Full exteriror hand wash</Text>
                             </View>
                             <View
                                 style={{

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Header, Slider, Card, MapCalendar } from '../../components'
-import { View, ScrollView } from 'react-native';
+import { Header, Slider, Card, MapCalendar, Map } from '../../components'
+import { View, ScrollView, StyleSheet } from 'react-native';
 
 
 export default class Mapscreen extends Component {
@@ -14,11 +14,12 @@ export default class Mapscreen extends Component {
         return (
             <View>
                 <Header
-                    title="Select Your Package"
+                    title="Booking Summery"
                     iconName="chevron-left"
                     goBack={goBack}
                 />
-                <ScrollView>
+                <ScrollView >
+                    <Map />
                     <MapCalendar />
                 </ScrollView>
             </View>
@@ -27,9 +28,10 @@ export default class Mapscreen extends Component {
 }
 const styles = {
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        // flex: 1,
+        // justifyContent: 'center',
+        // alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
+
 }

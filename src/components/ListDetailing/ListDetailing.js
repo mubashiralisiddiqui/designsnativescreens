@@ -11,17 +11,17 @@ export default class CarList extends Component {
         } = this.props
         const list = [
             {
-                name: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum has been the industry Lorem Ipsum has been the industry Lorem',
+                name: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenai the industry Lorem Ipsum has been the industries Lorem Ipsum has been the industry Lorem',
                 avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
                 subtitle: 'Read More',
             },
             {
-                name: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum has been the industry Lorem Ipsum has been the industry Lorem',
+                name: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenai the industry Lorem Ipsum has been the industries Lorem Ipsum has been the industry Lorem',
                 avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
                 subtitle: 'Read More',
             },
             {
-                name: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum has been the industry Lorem Ipsum has been the industry Lorem',
+                name: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenai the industry Lorem Ipsum has been the industries Lorem Ipsum has been the industry Lorem',
                 avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
                 subtitle: 'Read More',
             },
@@ -37,7 +37,7 @@ export default class CarList extends Component {
                     <List containerStyle={{ marginTop: 0, borderTopWidth: 0, borderBottomWidth: 0, borderBottomColor: 'transparent' }}>
                         {
                             list.map((l, i) => (
-                                < TouchableOpacity onPress={() => navigate('sliderScreen')}>
+                                < TouchableOpacity onPress={() => navigate('Mapscreen')}>
                                     < ListItem
                                         roundAvatar
                                         avatar={require('./3.png')}
@@ -53,6 +53,7 @@ export default class CarList extends Component {
                                             fontSize: 12,
                                             color: '#C5C5C5',
                                             width: 270,
+                                            textAlign: 'auto',
                                             fontWeight: 'normal',
                                             flexWrap: 'wrap'
                                         }}

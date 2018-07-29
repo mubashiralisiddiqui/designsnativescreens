@@ -16,7 +16,7 @@ export default class AppHeader extends Component {
                     leftComponent={<Icon
                         onPress={() => goBack && goBack(null)}
                         name={iconName}
-                        type='feather'
+                        type='entypo'
                         color='#fff'
                         size={28} />
                     }

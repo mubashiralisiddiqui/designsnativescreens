@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 import { SliderContainer } from './src/container'
-
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
 import { AppNav } from './src/navigation'
 
 

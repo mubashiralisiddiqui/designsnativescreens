@@ -10,6 +10,6 @@ export const AppNav = StackNavigator({
     Mapscreen: { screen: Mapscreen }
 }, {
         headerMode: 'screen',
-        initialRouteName: 'Mapscreen'
+        initialRouteName: 'sliderScreen'
     }
 )
