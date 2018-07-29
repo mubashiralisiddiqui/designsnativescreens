@@ -11,17 +11,20 @@ import {
   Text,
   View
 } from 'react-native';
-import {SliderContainer}from './src/container'
+import { SliderContainer } from './src/container'
 
-
+import { AppNav } from './src/navigation'
 
 
 
 export default class App extends Component {
+  static navigationOptions = {
+    header: null
+  }
   render() {
     return (
       <View style={styles.container}>
-        <SliderContainer/>
+        <AppNav />
       </View>
     );
   }

@@ -25,36 +25,20 @@ export default class AppHeader extends Component {
                         <CardHeader />
                         <View style={{ marginTop: -70 }}>
                             <View
-                               style={{
-                                // width: 180,
-                                flexDirection: 'row',
-                                alignItems: 'flex-start',
-                                justifyContent: 'flex-start',
-                                marginVertical:1,
-                                left:10
-                            }}
+                                style={{
+                                    // width: 180,
+                                    flexDirection: 'row',
+                                    alignItems: 'flex-start',
+                                    justifyContent: 'flex-start',
+                                    marginVertical: 1,
+                                    left: 10
+                                }}
                             >
                                 <Wheel
-                                   size={20}
+                                    size={20}
                                     name="ship-wheel"
                                 />
-                                <Text style={{ color: '#C9C9C9',left:10 }}>Full exteriror hand wash</Text>
-                            </View>
-                            <View
-                               style={{
-                                // width: 180,
-                                flexDirection: 'row',
-                                alignItems: 'flex-start',
-                                justifyContent: 'flex-start',
-                                marginVertical:1,
-                                left:10
-                            }}
-                            >
-                                <Thermometor
-                                    name='speedometer'
-                                    size={20}
-                                />
-                                <Text style={{ color: '#C9C9C9',left:10 }}>Tyre dressing</Text>
+                                <Text style={{ color: '#C9C9C9', left: 10 }}>Full exteriror hand wash</Text>
                             </View>
                             <View
                                 style={{
@@ -62,28 +46,44 @@ export default class AppHeader extends Component {
                                     flexDirection: 'row',
                                     alignItems: 'flex-start',
                                     justifyContent: 'flex-start',
-                                    marginVertical:1,
-                                    left:10
+                                    marginVertical: 1,
+                                    left: 10
                                 }}
-                            >
-                                <Icon name="menu" />
-                                <Text style={{ color: '#C9C9C9',left:10 }}>Exterior window cleaning</Text>
-                            </View>
-                            <View
-                              style={{
-                                // width: 180,
-                                flexDirection: 'row',
-                                alignItems: 'flex-start',
-                                justifyContent: 'flex-start',
-                                marginVertical:1,
-                                left:10
-                            }}
                             >
                                 <Thermometor
                                     name='speedometer'
                                     size={20}
                                 />
-                                <Text style={{ color: '#C9C9C9',left:10 }}>Glossy exteriror</Text>
+                                <Text style={{ color: '#C9C9C9', left: 10 }}>Tyre dressing</Text>
+                            </View>
+                            <View
+                                style={{
+                                    // width: 180,
+                                    flexDirection: 'row',
+                                    alignItems: 'flex-start',
+                                    justifyContent: 'flex-start',
+                                    marginVertical: 1,
+                                    left: 10
+                                }}
+                            >
+                                <Icon name="menu" />
+                                <Text style={{ color: '#C9C9C9', left: 10 }}>Exterior window cleaning</Text>
+                            </View>
+                            <View
+                                style={{
+                                    // width: 180,
+                                    flexDirection: 'row',
+                                    alignItems: 'flex-start',
+                                    justifyContent: 'flex-start',
+                                    marginVertical: 1,
+                                    left: 10
+                                }}
+                            >
+                                <Thermometor
+                                    name='speedometer'
+                                    size={20}
+                                />
+                                <Text style={{ color: '#C9C9C9', left: 10 }}>Glossy exteriror</Text>
                             </View>
                         </View>
                         <View>
@@ -108,6 +108,7 @@ export default class AppHeader extends Component {
                     </View>
                 </Card>
                 <Button
+                    onPress={() => this.props.navigate('listScreen')}
                     backgroundColor='#03A9F4'
                     buttonStyle={{
                         marginLeft: 'auto',

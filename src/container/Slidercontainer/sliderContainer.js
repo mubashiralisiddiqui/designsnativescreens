@@ -4,13 +4,22 @@ import { View, ScrollView } from 'react-native';
 
 
 export default class Slidercontainer extends Component {
+    static navigationOptions = {
+        header: null
+    }
     render() {
+        const { navigate } = this.props.navigation
         return (
             <View>
-                <Header />
+                <Header
+                    title="Car shop"
+                    iconName="menu"
+                />
                 <ScrollView>
                     <Slider />
-                    <Card />
+                    <Card
+                        navigate={navigate}
+                    />
                 </ScrollView>
             </View>
         )

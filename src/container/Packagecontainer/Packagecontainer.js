@@ -4,17 +4,27 @@ import { ScrollView, View } from 'react-native';
 
 
 export default class Packagecontainer extends Component {
-    // static navigationOptions = {
-    //     // header: null,
-    //     header: (props) => <Header {...props} title='Setect Your Package' iconNameLeft='home' iconNameRight='none' />,
-    // }
+    static navigationOptions = {
+        header: null,
+
+    }
     render() {
+        const { navigate } = this.props.navigation
+        const { goBack } = this.props.navigation;
         return (
             <View style={styles.container}>
-                <Header />
+                <Header
+                    title="Select Your Package"
+                    iconName="chevron-left"
+                    goBack={goBack}
+                />
                 <ScrollView >
-                    <CarList />
-                    <ListDetailing />
+                    <CarList
+                        navigate={navigate}
+                    />
+                    <ListDetailing
+                        navigate={navigate}
+                    />
                 </ScrollView>
             </View>
         )

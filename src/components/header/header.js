@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-import { Header } from 'react-native-elements';
+import { Header, Icon } from 'react-native-elements';
 import { View } from 'react-native'
 
 
 export default class AppHeader extends Component {
     render() {
+        const {
+            iconName,
+            title,
+            goBack
+        } = this.props
         return (
             <View>
                 <Header
-                    leftComponent={{ icon: 'chevron-left', color: '#fff', size:32 }}
-                    centerComponent={{ text: 'Select Your Package',  style: { color: '#fff',fontSize:18,marginBottom:5 } }}
-                    // rightComponent={{ icon: 'home', color: '#fff' }}
+                    leftComponent={<Icon
+                        onPress={() => goBack && goBack(null)}
+                        name={iconName}
+                        type='feather'
+                        color='#fff'
+                        size={28} />
+                    }
+                    centerComponent={{ text: title, style: { color: '#fff', fontSize: 18, marginBottom: 5 } }}
+                // rightComponent={{ icon: 'home', color: '#fff' }}
                 />
             </View>
         )
