@@ -13,6 +13,5 @@ export {
     Card,
     CarList,
     ListDetailing,
-    CardHeader,
     MapCalendar
 }

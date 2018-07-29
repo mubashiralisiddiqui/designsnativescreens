@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
-import { Header, Slider, Card,MapCalendar } from '../../components'
+import { Header, Slider, Card, MapCalendar } from '../../components'
 import { View, ScrollView } from 'react-native';
 
 
 export default class Mapscreen extends Component {
+    static navigationOptions = {
+        header: null,
+
+    }
     render() {
+        const { navigate } = this.props.navigation
+        const { goBack } = this.props.navigation;
         return (
             <View>
-                <Header />
+                <Header
+                    title="Select Your Package"
+                    iconName="chevron-left"
+                    goBack={goBack}
+                />
                 <ScrollView>
-                 <MapCalendar/>
+                    <MapCalendar />
                 </ScrollView>
             </View>
         )
